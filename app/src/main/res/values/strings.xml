@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MAD</string>
+    <string name="app_name">APP TITLE</string>
     <string name="register">REGISTER</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
@@ -10,4 +10,12 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="login">Login</string>
+    <string name="mental_health">Mental Health</string>
+    <string name="addiction_recovery">Addiction recovery</string>
+    <string name="previous_activities">Previous Activities</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_is_mental_health_fragment">This is Mental Health Fragment</string>
+    <string name="this_is_addiction_recovery_fragment">This is Addiction Recovery Fragment</string>
+    <string name="this_is_previous_activity_fragment">This is Previous Activity Fragment</string>
 </resources>
