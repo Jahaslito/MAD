@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "502125750164",
+    "project_id": "jah-mad-project",
+    "storage_bucket": "jah-mad-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502125750164:android:5fe2bfdcd519711c9f5181",
+        "android_client_info": {
+          "package_name": "com.jaffer.mad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502125750164-o6naeg6nerbsqqkv9jt6smn9ckn0fpi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuiOQIMyDLFaLKfk9KOjh4n-B695wPobM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502125750164-o6naeg6nerbsqqkv9jt6smn9ckn0fpi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

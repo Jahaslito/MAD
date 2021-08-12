@@ -21,7 +21,6 @@
             android:layout_marginTop="@dimen/loginViewsMargin"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/register_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name">
@@ -30,12 +29,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:id="@+id/register_name"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email">
@@ -45,12 +44,12 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:background="@color/white"
+                android:id="@+id/register_email"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password">
@@ -60,12 +59,12 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:background="@color/white"
+                android:id="@+id/register_password"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/register_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/confirm_password">
@@ -75,11 +74,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:background="@color/white"
+                android:id="@+id/register_confirm"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/register_button"
             style="@style/loginButton"
             android:layout_gravity="center"
             android:text="@string/register"
