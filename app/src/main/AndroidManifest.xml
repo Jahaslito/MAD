@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD">
-        <activity android:name=".RemindersActivity"></activity>
+        <activity android:name=".NewReminderActivity"></activity>
+        <activity android:name=".DailyActivity" />
+        <activity android:name=".RemindersActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
