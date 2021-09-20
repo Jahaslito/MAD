@@ -12,11 +12,15 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="mental_health">Mental Health</string>
-    <string name="addiction_recovery">Addiction recovery</string>
+    <string name="addiction_recovery">Addiction Recovery</string>
     <string name="previous_activities">Previous Activities</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="this_is_mental_health_fragment">This is Mental Health Fragment</string>
     <string name="this_is_addiction_recovery_fragment">This is Addiction Recovery Fragment</string>
     <string name="this_is_previous_activity_fragment">This is Previous Activity Fragment</string>
+    <string name="clap_count">Clap count</string>
+    <string name="author_name">Author name</string>
+    <string name="description">Description</string>
+    <string name="article_title">Article title</string>
 </resources>
