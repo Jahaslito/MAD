@@ -7,29 +7,17 @@
     android:background="@color/white">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/this_is_previous_activity_fragment"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:textColor="@color/black"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_routes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/this_is_previous_activity_fragment"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textColor="@color/black"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/testActivity"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:text="Test"
-        android:onClick="test"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/testActivity2"
-        android:layout_below="@+id/testActivity"
-        android:layout_centerHorizontal="true"
-        android:text="Test 2"
-        android:onClick="test2"/>
-
+        android:layout_marginTop="8dp">
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
