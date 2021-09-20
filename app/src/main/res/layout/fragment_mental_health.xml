@@ -8,11 +8,19 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/mental_fragment_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/this_is_mental_health_fragment"
+        android:text="@string/mental_health"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textColor="@color/black"/>
+        android:textColor="@color/primaryTextColor"
+        android:textSize="35sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mental_recycler"
+        android:layout_below="@id/mental_fragment_title"/>
 
 </RelativeLayout>

@@ -101,27 +101,32 @@ public class AddictionRecoveryFragment extends Fragment {
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Loading...");
         progressDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://medium.com/article/when-your-addiction-recovery-stories-backfire-cc15fed7b5fd", new Response.Listener<String>() {
+        String []urls = getResources().getStringArray(R.array.addictionUrl);
+        String []makofi = getResources().getStringArray(R.array.clapCountAddiction);
 
-            @Override
-            public void onResponse(String response) {
-                Log.w("res", "Response: " + response);
-                progressDialog.dismiss();
-                Document document = Jsoup.parse(response);
-                Elements head = document.select("head");
-                Elements scripts = head.select("script");
-                Element data = scripts.last();
-                Log.w("res", "CLEAN: " + data.data());
-                try {
-                    Log.w("res", "DATA: " + data.data());
+        for (int i = 0; i < urls.length; i++ ) {
+            int finalI = i;
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, urls[i], new Response.Listener<String>() {
 
-                    JSONObject jsonObject = new JSONObject(data.data());
-                    Log.w("res", "JSONOBJECT: " + jsonObject);
-                    Log.w("res", "TEST: " + jsonObject.getJSONArray("image"));
-                    JSONArray imageUrl = jsonObject.getJSONArray("image");
-                    JSONArray creator = jsonObject.getJSONArray("creator");
-                    String []title = jsonObject.getString("headline").split("-");
-                    Article article = new Article(imageUrl.getString(0), title[0], creator.getString(0), jsonObject.getString("description"), "200");
+                @Override
+                public void onResponse(String response) {
+                    Log.w("res", "Response: " + response);
+                    progressDialog.dismiss();
+                    Document document = Jsoup.parse(response);
+                    Elements head = document.select("head");
+                    Elements scripts = head.select("script");
+                    Element data = scripts.last();
+                    Log.w("res", "CLEAN: " + data.data());
+                    try {
+                        Log.w("res", "DATA: " + data.data());
+
+                        JSONObject jsonObject = new JSONObject(data.data());
+                        Log.w("res", "JSONOBJECT: " + jsonObject);
+                        Log.w("res", "TEST: " + jsonObject.getJSONArray("image"));
+                        JSONArray imageUrl = jsonObject.getJSONArray("image");
+                        JSONArray creator = jsonObject.getJSONArray("creator");
+                        String[] title = jsonObject.getString("headline").split("-");
+                        Article article = new Article(imageUrl.getString(0), title[0], creator.getString(0), jsonObject.getString("description"), makofi[finalI]);
 //                    JSONArray array = jsonObject.getJSONArray("items");
 //                    for (int i = 0; i < array.length(); i++) {
 //                        jsonArray.getString(2);
@@ -133,26 +138,28 @@ public class AddictionRecoveryFragment extends Fragment {
                         Log.d("res", "article" + article);
 //                    }
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    Log.d("Tag", response);
                 }
-                Log.d("Tag", response);
-            }
-            }, new Response.ErrorListener(){
+            }, new Response.ErrorListener() {
 
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), "Error " +error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-        requestQueue.add(stringRequest);
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getContext(), "Error " + error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+            requestQueue.add(stringRequest);
 
 //        Article testArticle = new Article("https://miro.medium.com/max/1200/0*uO24VIR-a6NKx-0x", "Addiction Test Title", "Georgina Nyokabi", "Blah blah blah", "200");
 
 //        for (int i = 0; i <= 6; i++){
 //            articleArrayList.add(testArticle);
 //        }
-        articleAdapter.notifyDataSetChanged();
+            articleAdapter.notifyDataSetChanged();
+        }
     }
 }

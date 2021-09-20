@@ -12,5 +12,5 @@
     <color name="primaryTextColor">#2196F3</color>
     <color name="loginBkColor">#f0f0f0</color>
     <color name="whiteTextColor">#fff</color>
-
+    <color name="grey">#808080</color>
 </resources>
