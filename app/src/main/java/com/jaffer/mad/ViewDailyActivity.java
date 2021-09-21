@@ -6,12 +6,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.github.lzyzsd.circleprogress.DonutProgress;
+//import com.github.lzyzsd.circleprogress.DonutProgress;
 
 public class ViewDailyActivity extends AppCompatActivity {
 
     private TextView mViewDate,mActivity_1,mActivity_2,mActivity_3,mActivity_4,mActivity_5;
-    private DonutProgress donutProgress;
+//    private DonutProgress donutProgress;
     private int progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ViewDailyActivity extends AppCompatActivity {
         mActivity_3 = findViewById(R.id.view_activity_3);
         mActivity_4 = findViewById(R.id.view_activity_4);
         mActivity_5 = findViewById(R.id.view_activity_5);
-        donutProgress = findViewById(R.id.percentage_completion);
+//        donutProgress = findViewById(R.id.percentage_completion);
 
         progress = Integer.parseInt(getIntent().getStringExtra("Progress"));
         mViewDate.setText(getIntent().getStringExtra("Date"));
@@ -47,6 +47,6 @@ public class ViewDailyActivity extends AppCompatActivity {
         return true;
     }
     private void updateProgressBar() {
-        donutProgress.setProgress(progress);
+//        donutProgress.setProgress(progress);
     }
 }

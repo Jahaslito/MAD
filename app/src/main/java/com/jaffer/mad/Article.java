@@ -8,6 +8,9 @@ public class Article {
     private String clapCount;
     private String url;
 
+    public Article() {
+    }
+
     public Article(String imageUrl, String articleTitle, String author, String description, String clapCount, String url) {
         this.imageUrl = imageUrl;
         this.articleTitle = articleTitle;

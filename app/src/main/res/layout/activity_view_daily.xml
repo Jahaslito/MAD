@@ -77,13 +77,14 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="12dp"
                 android:text="@string/activity_1"/>
-            <com.github.lzyzsd.circleprogress.DonutProgress
-                android:id="@+id/percentage_completion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:donut_progress="20"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+
+<!--            <com.github.lzyzsd.circleprogress.DonutProgress-->
+<!--                android:id="@+id/percentage_completion"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:donut_progress="20"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"/>-->
 
         </LinearLayout>
 

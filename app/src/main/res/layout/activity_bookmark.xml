@@ -10,7 +10,7 @@
         android:id="@+id/bookmark_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bookmarks"
+        android:text="@string/bookmarks"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"

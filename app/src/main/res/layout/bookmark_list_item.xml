@@ -10,39 +10,39 @@
 
         <ImageView
             android:id="@+id/bookmark_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:adjustViewBounds="true"
-            android:layout_marginRight="3dp"/>
+            android:layout_marginEnd="10dp" />
 
         <TextView
             android:id="@+id/bookmark_article_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bookmark Title"
+            android:text="@string/bookmark_title"
             android:textColor="@color/black"
-            android:textSize="12sp"
-            android:layout_toRightOf="@id/bookmark_image"/>
+            android:textSize="17sp"
+            android:layout_toEndOf="@id/bookmark_image"/>
 
         <TextView
             android:id="@+id/bookmark_article_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Article Authur"
-            android:textSize="8sp"
+            android:text="@string/article_author"
+            android:textSize="14sp"
             android:textColor="@color/primaryTextColor"
-            android:layout_toRightOf="@id/bookmark_image"
+            android:layout_toEndOf="@id/bookmark_image"
             android:layout_below="@id/bookmark_article_title"/>
 
-        <TextView
-            android:id="@+id/bookmark_article_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Article Description"
-            android:textSize="7sp"
-            android:textColor="@color/black"
-            android:layout_toRightOf="@id/bookmark_image"
-            android:layout_below="@id/bookmark_article_author"/>
+<!--        <TextView-->
+<!--            android:id="@+id/bookmark_article_description"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/article_description"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_toEndOf="@id/bookmark_image"-->
+<!--            android:layout_below="@id/bookmark_article_author"/>-->
 
 
 
