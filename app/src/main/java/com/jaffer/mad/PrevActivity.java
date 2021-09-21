@@ -1,11 +1,16 @@
 package com.jaffer.mad;
 
+import java.util.List;
+
 public class PrevActivity {
     private String date, Activity1,Activity2,Activity3,Activity4,Activity5;
     private String progress;
+    private List<String> completedActivities;
+    private String userID;
+
 
     PrevActivity(){};
-    PrevActivity(String date,String activity1,String activity2,String activity3,String activity4,String activity5, String progress){
+    PrevActivity(String date, String activity1, String activity2, String activity3, String activity4, String activity5, String progress, List<String> completedActivities, String userID){
         this.date = date;
         this.Activity1 = activity1;
         this.Activity2 = activity2;
@@ -14,6 +19,16 @@ public class PrevActivity {
         this.Activity5 = activity5;
         this.progress = progress;
 
+        this.completedActivities = completedActivities;
+        this.userID = userID;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getDate() {
@@ -70,5 +85,12 @@ public class PrevActivity {
 
     public void setActivity5(String Activity5) {
         this.Activity5 = Activity5;
+    }
+    public List<String> getCompletedActivities() {
+        return completedActivities;
+    }
+
+    public void setCompletedActivities(List<String> completedActivities) {
+        this.completedActivities = completedActivities;
     }
 }

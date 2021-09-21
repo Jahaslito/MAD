@@ -8,9 +8,13 @@ import android.widget.TextView;
 
 import com.github.lzyzsd.circleprogress.DonutProgress;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ViewDailyActivity extends AppCompatActivity {
 
     private TextView mViewDate,mActivity_1,mActivity_2,mActivity_3,mActivity_4,mActivity_5;
+
     private DonutProgress donutProgress;
     private int progress;
     @Override
@@ -30,6 +34,8 @@ public class ViewDailyActivity extends AppCompatActivity {
         mActivity_3 = findViewById(R.id.view_activity_3);
         mActivity_4 = findViewById(R.id.view_activity_4);
         mActivity_5 = findViewById(R.id.view_activity_5);
+
+
         donutProgress = findViewById(R.id.percentage_completion);
 
         progress = Integer.parseInt(getIntent().getStringExtra("Progress"));
@@ -39,6 +45,7 @@ public class ViewDailyActivity extends AppCompatActivity {
         mActivity_3.setText(getIntent().getStringExtra("Activity3"));
         mActivity_4.setText(getIntent().getStringExtra("Activity4"));
         mActivity_5.setText(getIntent().getStringExtra("Activity5"));
+
         updateProgressBar();
     }
     @Override

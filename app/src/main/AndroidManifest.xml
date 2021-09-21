@@ -20,6 +20,7 @@
         <activity android:name=".DailyActivity" />
         <activity android:name=".RemindersActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".ViewDailyActivity"/>
         <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

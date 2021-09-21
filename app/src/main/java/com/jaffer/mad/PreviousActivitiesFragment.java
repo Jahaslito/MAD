@@ -1,9 +1,11 @@
 package com.jaffer.mad;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -114,16 +117,21 @@ public class PreviousActivitiesFragment extends Fragment {
 
     private void initializePreviousActivitiesData() {
         databaseReference.addValueEventListener(new ValueEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                LocalDateTime now = LocalDateTime.now();
+                String today= now.getDayOfWeek() + ", " + now.getDayOfMonth() + " " + now.getMonth()+ " " + now.getYear();
                 prevActivities.clear();
                 activityID.clear();
                 Iterator<DataSnapshot> a = snapshot.getChildren().iterator();
                 while (a.hasNext()){
                     DataSnapshot Previous = a.next();
                     if(Previous.child("userID").getValue().equals(mCurrentUser.getUid())){
-                        prevActivities.add(Previous.getValue(PrevActivity.class));
-                        activityID.add(Previous.getKey());
+                        if(!Previous.child("date").getValue().equals(today)) {
+                            prevActivities.add(Previous.getValue(PrevActivity.class));
+                            activityID.add(Previous.getKey());
+                        }
                     }else{
                         Log.d("Data si zake", Previous.getValue().toString());
                     }

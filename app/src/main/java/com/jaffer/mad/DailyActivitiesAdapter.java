@@ -2,19 +2,20 @@ package com.jaffer.mad;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DailyActivitiesAdapter extends RecyclerView.Adapter<DailyActivitiesAdapter.ViewHolder> {
     private ArrayList<PrevActivity> activitiesData;
@@ -49,6 +50,7 @@ public class DailyActivitiesAdapter extends RecyclerView.Adapter<DailyActivities
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mActivity1,mActivity2,mActivity3,mActivity4,mActivity5,mProgress;
+
         private TextView mDate;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
@@ -68,6 +70,7 @@ public class DailyActivitiesAdapter extends RecyclerView.Adapter<DailyActivities
             mActivity3.setText(prevActivity.getActivity3());
             mActivity4.setText(prevActivity.getActivity4());
             mActivity5.setText(prevActivity.getActivity5());
+
             mProgress.setText(prevActivity.getProgress());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -82,6 +85,7 @@ public class DailyActivitiesAdapter extends RecyclerView.Adapter<DailyActivities
                     intent1.putExtra("Activity3", prevActivity.getActivity3());
                     intent1.putExtra("Activity4", prevActivity.getActivity4());
                     intent1.putExtra("Activity5", prevActivity.getActivity5());
+                    intent1.putExtra("completedActivities", String.valueOf(prevActivity.getCompletedActivities()));
                     intent1.putExtra("Progress", s_progress[0]);
                     myContext.startActivity(intent1);
                 }
