@@ -124,7 +124,7 @@ public class MentalHealthFragment extends Fragment {
                         JSONArray imageUrl = jsonObject.getJSONArray("image");
                         JSONArray creator = jsonObject.getJSONArray("creator");
                         String[] title = jsonObject.getString("headline").split("-");
-                        Article article = new Article(imageUrl.getString(0), title[0], creator.getString(0), jsonObject.getString("description"), makofi[finalI]);
+                        Article article = new Article(imageUrl.getString(0), title[0], creator.getString(0), jsonObject.getString("description"), makofi[finalI], urls[finalI]);
 
                         articleArrayList.add(article);
                         Log.d("res", "article" + article);

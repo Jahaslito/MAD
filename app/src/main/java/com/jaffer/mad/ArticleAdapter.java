@@ -1,6 +1,7 @@
 package com.jaffer.mad;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,7 +67,11 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(mContext, article.getArticleTitle(), Toast.LENGTH_SHORT).show();
+                    String webpage = article.getUrl();
+                    Intent webViewIntent = new Intent(mContext, BrowserActivity.class);
+                    webViewIntent.putExtra("URL", webpage);
+                    mContext.startActivity(webViewIntent);
+//                    Toast.makeText(mContext, article.getUrl(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

@@ -6,13 +6,15 @@ public class Article {
     private String author;
     private String description;
     private String clapCount;
+    private String url;
 
-    public Article(String imageUrl, String articleTitle, String author, String description, String clapCount) {
+    public Article(String imageUrl, String articleTitle, String author, String description, String clapCount, String url) {
         this.imageUrl = imageUrl;
         this.articleTitle = articleTitle;
         this.author = author;
         this.description = description;
         this.clapCount = clapCount;
+        this.url = url;
     }
 
     public String getImageUrl() {
@@ -33,5 +35,9 @@ public class Article {
 
     public String getClapCount() {
         return clapCount;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }

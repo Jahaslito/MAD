@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bookmark_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="3dp"/>
+
+        <TextView
+            android:id="@+id/bookmark_article_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bookmark Title"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/bookmark_image"/>
+
+        <TextView
+            android:id="@+id/bookmark_article_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Article Authur"
+            android:textSize="8sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_toRightOf="@id/bookmark_image"
+            android:layout_below="@id/bookmark_article_title"/>
+
+        <TextView
+            android:id="@+id/bookmark_article_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Article Description"
+            android:textSize="7sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/bookmark_image"
+            android:layout_below="@id/bookmark_article_author"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

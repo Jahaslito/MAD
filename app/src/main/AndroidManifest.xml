@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD">
-        <activity android:name=".ViewDailyActivity"></activity>
-        <activity android:name=".NewReminderActivity"></activity>
+        <activity android:name=".BrowserActivity"></activity>
+        <activity android:name=".NewReminderActivity" />
+        <activity
+            android:name=".BookmarkActivity"
+            android:exported="true" />
+
         <activity android:name=".DailyActivity" />
         <activity android:name=".RemindersActivity" />
         <activity android:name=".RegisterActivity" />
