@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -41,13 +42,14 @@ public class PreviousActivitiesFragment extends Fragment {
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
+    private FloatingActionButton fab;
 
-//    // TODO: Rename parameter arguments, choose names that match
-//    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+    //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 //    private static final String ARG_PARAM1 = "param1";
 //    private static final String ARG_PARAM2 = "param2";
 //
-//    // TODO: Rename and change types of parameters
+
 //    private String mParam1;
 //    private String mParam2;
 //
@@ -63,7 +65,7 @@ public class PreviousActivitiesFragment extends Fragment {
 //     * @param param2 Parameter 2.
 //     * @return A new instance of fragment PreviousActivitiesFragment.
 //     */
-//    // TODO: Rename and change types and number of parameters
+//    //
 //    public static PreviousActivitiesFragment newInstance(String param1, String param2) {
 //        PreviousActivitiesFragment fragment = new PreviousActivitiesFragment();
 //        Bundle args = new Bundle();
@@ -89,6 +91,7 @@ public class PreviousActivitiesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_previous_activities, container, false);
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
+        fab = view.findViewById(R.id.fab);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("PreviousActivities");
         activitiesRecyclerView = view.findViewById(R.id.recycler_previous_activities);
@@ -98,6 +101,14 @@ public class PreviousActivitiesFragment extends Fragment {
         dailyActivitiesAdapter = new DailyActivitiesAdapter(prevActivities, activityID ,getContext());
         activitiesRecyclerView.setAdapter(dailyActivitiesAdapter);
         initializePreviousActivitiesData();
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent daily = new Intent(getContext(),DailyActivity.class);
+                startActivity(daily);
+            }
+        });
         return view;
     }
 
