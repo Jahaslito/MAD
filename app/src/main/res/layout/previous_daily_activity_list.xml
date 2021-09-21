@@ -25,9 +25,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="12dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Sunday, 29 August 2021"
                 android:textColor="@color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginBottom="12dp"
+                android:text="80% Completed"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="18sp" />
 
             <TextView
@@ -35,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="12dp"
+                android:visibility="gone"
                 android:textSize="20sp"
                 android:text="Activity 1"/>
             <TextView
@@ -42,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="12dp"
+                android:visibility="gone"
                 android:textSize="20sp"
                 android:text="@string/activity_1"/>
             <TextView
@@ -49,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="12dp"
+                android:visibility="gone"
                 android:textSize="20sp"
                 android:text="@string/activity_1"/>
             <TextView
@@ -56,6 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="20sp"
+                android:visibility="gone"
                 android:layout_marginBottom="12dp"
                 android:text="@string/activity_1"/>
             <TextView
@@ -63,18 +76,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="20sp"
+                android:visibility="gone"
                 android:layout_marginBottom="12dp"
                 android:text="@string/activity_1"/>
 
-            <TextView
-                android:id="@+id/progress_circular"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginBottom="12dp"
-                android:text="80% Completed"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="20sp" />
+
 
         </LinearLayout>
 

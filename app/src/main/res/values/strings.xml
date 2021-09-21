@@ -23,6 +23,7 @@
     <string name="author_name">Author name</string>
     <string name="description">Description</string>
     <string name="article_title">Article title</string>
+    <string name="activity_1">Activity 1</string>
 
     <string-array name="addictionUrl">
         <item>https://medium.com/article/when-your-addiction-recovery-stories-backfire-cc15fed7b5fd</item>
