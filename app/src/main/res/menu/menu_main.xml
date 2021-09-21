@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jaffer.MAD.MainActivity">
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="1"
+        android:title="@string/bookmarks"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_bookmarks"
+        android:onClick="seeBookmarks"/>
+    <item
+        android:id="@+id/action_order"
+        android:orderInCategory="2"
+        android:title="@string/reminders"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_reminder" />
+    <item
+        android:id="@+id/action_status"
+        android:orderInCategory="3"
+        android:title="@string/logout"
+        app:showAsAction="never"
+        android:onClick="logout"
+        />
+
+
+</menu>

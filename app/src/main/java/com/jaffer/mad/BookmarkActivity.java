@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +28,7 @@ public class BookmarkActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,10 @@ public class BookmarkActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bookmark);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference();
         mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+        databaseReference = firebaseDatabase.getReference("Bookmarks").child(currentUser.getUid());
+
 
         articleArrayList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_bookmarks);
@@ -54,11 +58,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 Iterator<DataSnapshot> bookmarks = snapshot.getChildren().iterator();
                 while (bookmarks.hasNext()){
                     DataSnapshot bookmark = bookmarks.next();
-                    //Log.d("Routes", route.toString());
-//                    if(route.child("availability").getValue().equals("active") &&
-//                            route.child("status").getValue().equals("enabled")){
-//                        routesList.add(route.child("routes").getValue().toString());
-//                    }
+                    articleArrayList.add(bookmark.getValue(Article.class));
 
                 }
                 bookmarkAdapter.notifyDataSetChanged();

@@ -7,14 +7,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -39,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //set the tab to fill the layout
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        logoutBtn = findViewById(R.id.logoutButton);
-        logoutBtn.setOnClickListener(View ->{
-            mAuth.signOut();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        });
+
         //Use the pager adapter to manage screens
         //create an instance of the view pager
         final ViewPager viewPager = findViewById(R.id.view_pager);
@@ -88,5 +89,22 @@ public class MainActivity extends AppCompatActivity {
     public void test2(View view){
         Intent mIntent= new Intent(this, RemindersActivity.class);
         startActivity(mIntent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public void seeBookmarks(MenuItem item) {
+        Intent bookmarksIntent = new Intent(MainActivity.this, BookmarkActivity.class);
+        startActivity(bookmarksIntent);
+    }
+
+    public void logout(MenuItem item) {
+        mAuth.signOut();
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 }

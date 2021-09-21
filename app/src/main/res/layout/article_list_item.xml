@@ -58,7 +58,17 @@
             android:padding="10dp"
             />
 
-
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookmarkBtn"
+            android:src="@drawable/ic_bookmark_unmarked"
+            android:background="@color/white"
+            android:layout_below="@id/claps"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="12dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"

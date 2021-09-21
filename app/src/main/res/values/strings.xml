@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APP TITLE</string>
+    <string name="app_name">BREATH</string>
     <string name="register">REGISTER</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
@@ -23,8 +23,14 @@
     <string name="author_name">Author name</string>
     <string name="description">Description</string>
     <string name="article_title">Article title</string>
-    <string name="activity_1">Activity 1</string>
-    <string name="Memo">Memo</string>
+    <string name="activity_1">Activity</string>
+    <string name="activity_2">Activity 2</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="reminders">Reminders</string>
+    <string name="logout">Logout</string>
+    <string name="bookmark_title">Bookmark Title</string>
+    <string name="article_author">Article Author</string>
+    <string name="article_description">Article Description</string>
 
     <string-array name="addictionUrl">
         <item>https://medium.com/article/when-your-addiction-recovery-stories-backfire-cc15fed7b5fd</item>

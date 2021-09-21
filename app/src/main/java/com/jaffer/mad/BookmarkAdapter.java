@@ -1,6 +1,7 @@
 package com.jaffer.mad;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,21 +52,26 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             super(itemView);
             bookmarkArticleTitle = itemView.findViewById(R.id.bookmark_article_title);
             bookmarkAuthur = itemView.findViewById(R.id.bookmark_article_author);
-            bookmarkDescription = itemView.findViewById(R.id.bookmark_article_description);
+//            bookmarkDescription = itemView.findViewById(R.id.bookmark_article_description);
             bookmarkImage = itemView.findViewById(R.id.bookmark_image);
         }
 
         public void bindTo(Article article){
             bookmarkArticleTitle.setText(article.getArticleTitle());
             bookmarkAuthur.setText(article.getAuthor());
-            bookmarkDescription.setText(article.getDescription());
+//            bookmarkDescription.setText(article.getDescription());
 
             Picasso.with(mContext).load(article.getImageUrl()).into(bookmarkImage);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(mContext, article.getArticleTitle(), Toast.LENGTH_SHORT).show();
+                    String webpage = article.getUrl();
+                    Intent webViewIntent = new Intent(mContext, BrowserActivity.class);
+                    webViewIntent.putExtra("URL", webpage);
+                    webViewIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mContext.startActivity(webViewIntent);
+//                    Toast.makeText(mContext, article.getArticleTitle(), Toast.LENGTH_SHORT).show();
                 }
             });
 
