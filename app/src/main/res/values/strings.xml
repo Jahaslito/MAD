@@ -19,4 +19,5 @@
     <string name="this_is_mental_health_fragment">This is Mental Health Fragment</string>
     <string name="this_is_addiction_recovery_fragment">This is Addiction Recovery Fragment</string>
     <string name="this_is_previous_activity_fragment">This is Previous Activity Fragment</string>
+    <string name="activity_1">Activity 1</string>
 </resources>

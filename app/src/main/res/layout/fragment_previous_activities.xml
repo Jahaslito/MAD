@@ -15,7 +15,7 @@
 <!--        android:layout_centerVertical="true"-->
 <!--        android:textColor="@color/black"/>-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_routes"
+        android:id="@+id/recycler_previous_activities"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp">

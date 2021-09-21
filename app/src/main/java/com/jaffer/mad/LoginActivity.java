@@ -17,6 +17,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
    private TextView goToRegister;
@@ -24,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
    private TextInputEditText passwordEditText;
    private Button loginBtn;
    private FirebaseAuth mAuth;
+   private FirebaseUser mCurrentUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.login_password);
         loginBtn = findViewById(R.id.LoginButton);
         mAuth = FirebaseAuth.getInstance();
-
+        mCurrentUser = mAuth.getCurrentUser();
         loginBtn.setOnClickListener(view -> {
             loginUser();
         });
@@ -71,5 +73,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void viewForgotPassword(View view){
         Toast.makeText(this, "Work in Progress", Toast.LENGTH_SHORT).show();
+    }
+    public void onStart(){
+        super.onStart();
+        if(mCurrentUser!= null){
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 }
