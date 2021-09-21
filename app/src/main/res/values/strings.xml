@@ -12,12 +12,107 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="mental_health">Mental Health</string>
-    <string name="addiction_recovery">Addiction recovery</string>
+    <string name="addiction_recovery">Addiction Recovery</string>
     <string name="previous_activities">Previous Activities</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="this_is_mental_health_fragment">This is Mental Health Fragment</string>
     <string name="this_is_addiction_recovery_fragment">This is Addiction Recovery Fragment</string>
     <string name="this_is_previous_activity_fragment">This is Previous Activity Fragment</string>
-    <string name="activity_1">Activity 1</string>
+    <string name="clap_count">Clap count</string>
+    <string name="author_name">Author name</string>
+    <string name="description">Description</string>
+    <string name="article_title">Article title</string>
+
+    <string-array name="addictionUrl">
+        <item>https://medium.com/article/when-your-addiction-recovery-stories-backfire-cc15fed7b5fd</item>
+        <item>https://medium.com/article/week-2-of-my-addiction-recovery-54c79bdf2fb4</item>
+        <item>https://medium.com/article/how-to-work-on-your-addiction-recovery-journey-6033ffdee439</item>
+        <item>https://medium.com/article/keeping-a-journal-as-an-addiction-recovery-tool-ad57407705d3</item>
+        <item>https://medium.com/article/understanding-anger-in-addiction-recovery-b38ca669311</item>
+        <item>https://medium.com/article/fast-way-to-addiction-recovery-three-days-to-peace-6dd6145ba421</item>
+        <item>https://medium.com/article/556bf9daab41</item>
+        <item>https://medium.com/article/what-my-addiction-recovery-taught-me-about-living-healthy-7842c4bff7bd</item>
+        <item>https://medium.com/article/alcoholism-and-addiction-recoverys-foundation-destroyed-5c398c7d1090</item>
+        <item>https://medium.com/article/when-my-life-ended-my-success-began-f2326b924416</item>
+        <item>https://medium.com/article/finding-the-will-to-live-addiction-recovery-a136252b460c</item>
+        <item>https://medium.com/article/people-places-and-things-addiction-recovery-c690199eac3c</item>
+        <item>https://medium.com/article/the-best-addiction-recovery-strategy-67c9dfe9aa25</item>
+        <item>https://medium.com/article/8e46b5acb027</item>
+        <item>https://medium.com/article/i-was-wrong-so-wrong-about-alcoholics-anonymous-78a9a77b6a66</item>
+        <item>https://medium.com/article/4-signs-of-codependency-recovery-f51820ea1743</item>
+        <item>https://medium.com/article/addiction-startup-youturn-works-with-employers-to-expand-access-to-substance-use-disorder-17b8594c162a</item>
+        <item>https://medium.com/article/the-role-of-dishonesty-in-addiction-a0cdcae16f72</item>
+        <item>https://medium.com/article/together-we-can-end-addiction-and-the-opioid-epidemic-1a4becf5d705</item>
+        <item>https://medium.com/article/read-your-own-book-a72ea1b89ed4</item>
+    </string-array>
+
+    <string-array name="clapCountAddiction">
+        <item>831</item>
+        <item>703</item>
+        <item>593</item>
+        <item>460</item>
+        <item>281</item>
+        <item>51</item>
+        <item>45</item>
+        <item>43</item>
+        <item>209</item>
+        <item>258</item>
+        <item>187</item>
+        <item>186</item>
+        <item>55</item>
+        <item>0</item>
+        <item>838</item>
+        <item>136</item>
+        <item>30</item>
+        <item>184</item>
+        <item>52</item>
+        <item>99</item>
+    </string-array>
+
+    <string-array name="mentalUrl">
+        <item>https://medium.com/article/honest-thoughts-from-a-veteran-about-gun-control-and-mental-health-c74930488e28</item>
+        <item>https://medium.com/article/4-habits-everyone-needs-for-better-mental-health-611394e84aa0</item>
+        <item>https://medium.com/article/trump-is-a-mental-health-story-652c340f4503</item>
+        <item>https://medium.com/article/woebot-ai-for-mental-health-d0e8632b82ba</item>
+        <item>https://medium.com/article/every-company-should-offer-mental-health-days-5fd148af3dff</item>
+        <item>https://medium.com/article/i-dont-like-brenÃ©-brown-anymore-d8ccaa51c01e</item>
+        <item>https://medium.com/article/its-2017-and-mental-health-is-still-an-issue-in-the-workplace-61efbef092f</item>
+        <item>https://medium.com/article/the-way-we-view-mental-health-is-backwards-and-absurd-f36177214a1d</item>
+        <item>https://medium.com/article/how-alcohol-affects-your-mental-health-38c112ff5f64</item>
+        <item>https://medium.com/article/9-mental-health-experts-on-the-strategies-they-use-to-get-over-bad-moods-e032b36374e8</item>
+        <item>https://medium.com/article/4-mental-health-tips-from-the-bhagavad-gita-d95535909918</item>
+        <item>https://medium.com/article/puking-my-way-to-good-mental-health-my-adventures-with-ayahuasca-9de299abdf13</item>
+        <item>https://medium.com/article/my-mental-health-toolbelt-9b9fdd4ae149</item>
+        <item>https://medium.com/article/emotional-fitness-3-essential-habits-for-better-mental-health-372a8a5ba2ab</item>
+        <item>https://medium.com/article/the-link-between-psychedelics-god-encounters-and-mental-health-87090d8a56b1</item>
+        <item>https://medium.com/article/the-emotional-damage-done-by-climate-change-2f8f9ad59155</item>
+        <item>https://medium.com/article/a-reflection-on-how-i-dug-myself-out-of-the-millennial-mental-health-decline-831ae56e721c</item>
+        <item>https://medium.com/article/one-important-and-highly-ignored-cause-of-mental-health-issues-98ec23405210</item>
+        <item>https://medium.com/article/on-mental-health-and-personal-finance-b5b41228ce9e</item>
+        <item>https://medium.com/article/a-mental-health-breakdown-is-your-reinvention-not-a-nightmare-b39b6c878333</item>
+    </string-array>
+
+    <string-array name="clapCountMental">
+        <item>25520</item>
+        <item>9755</item>
+        <item>14947</item>
+        <item>6729</item>
+        <item>2011</item>
+        <item>9078</item>
+        <item>3243</item>
+        <item>7578</item>
+        <item>4509</item>
+        <item>4385</item>
+        <item>4124</item>
+        <item>5401</item>
+        <item>6184</item>
+        <item>4104</item>
+        <item>3768</item>
+        <item>3523</item>
+        <item>3367</item>
+        <item>4180</item>
+        <item>836</item>
+        <item>3630</item>
+    </string-array>
 </resources>
