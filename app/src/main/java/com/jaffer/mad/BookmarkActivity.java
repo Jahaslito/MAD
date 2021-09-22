@@ -2,6 +2,7 @@ package com.jaffer.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +25,7 @@ public class BookmarkActivity extends AppCompatActivity {
     private ArrayList<Article> articleArrayList;
     private RecyclerView recyclerView;
     private BookmarkAdapter bookmarkAdapter;
-
+    private Toolbar toolbar;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
@@ -34,6 +35,11 @@ public class BookmarkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmark);
+        toolbar = findViewById(R.id.tool_bar_bookmark);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Bookmarks");
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -48,6 +54,12 @@ public class BookmarkActivity extends AppCompatActivity {
         recyclerView.setAdapter(bookmarkAdapter);
 
         initializeData();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     private void initializeData() {

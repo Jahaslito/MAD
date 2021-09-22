@@ -1,6 +1,10 @@
 package com.jaffer.mad;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -40,7 +44,6 @@ public class PreviousActivitiesFragment extends Fragment {
     private ArrayList<PrevActivity> prevActivities;
     private ArrayList<String> activityID;
     private DailyActivitiesAdapter dailyActivitiesAdapter;
-
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
@@ -95,6 +98,7 @@ public class PreviousActivitiesFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
         fab = view.findViewById(R.id.fab);
+//        fab.setImageBitmap(textAsBitmap("Today's Activities", 300, Color.WHITE));
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("PreviousActivities");
         activitiesRecyclerView = view.findViewById(R.id.recycler_previous_activities);
@@ -115,6 +119,20 @@ public class PreviousActivitiesFragment extends Fragment {
         return view;
     }
 
+    public static Bitmap textAsBitmap(String text, float textSize, int textColor) {
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setTextSize(textSize);
+        paint.setColor(textColor);
+        paint.setTextAlign(Paint.Align.LEFT);
+        float baseline = -paint.ascent(); // ascent() is negative
+        int width = (int) (paint.measureText(text) + 0.0f); // round
+        int height = (int) (baseline + paint.descent() + 0.0f);
+        Bitmap image = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(image);
+        canvas.drawText(text, 0, baseline, paint);
+        return image;
+    }
     private void initializePreviousActivitiesData() {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)

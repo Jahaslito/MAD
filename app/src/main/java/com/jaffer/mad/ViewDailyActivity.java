@@ -26,7 +26,7 @@ public class ViewDailyActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("Previous Activity");
 
         mViewDate = findViewById(R.id.view_daily_activity_date);
         mActivity_1 = findViewById(R.id.view_activity_1);

@@ -29,8 +29,10 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:backgroundTint="@color/primaryTextColor"
-        app:srcCompat="@drawable/ic_add"
-        tools:ignore="VectorDrawableCompat" />
+        app:tint="@color/white"
+        android:src="@drawable/ic_today"
+        tools:ignore="VectorDrawableCompat"
+        />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

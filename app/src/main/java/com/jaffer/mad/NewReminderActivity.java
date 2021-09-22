@@ -84,6 +84,8 @@ public class NewReminderActivity extends AppCompatActivity {
 
         boolean result= db.addData(time,message,title);
         if(result){
+            Intent intent = new Intent(this, RemindersActivity.class);
+            startActivity(intent);
             Toast.makeText(this, "Notification Added Successfully", Toast.LENGTH_SHORT).show();
         }else {
             Toast.makeText(this, "Oops! something went wrong", Toast.LENGTH_SHORT).show();

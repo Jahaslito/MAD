@@ -15,10 +15,12 @@
         <activity android:name=".NewReminderActivity" />
         <activity
             android:name=".BookmarkActivity"
-            android:exported="true" />
+            android:exported="true"
+            />
 
         <activity android:name=".DailyActivity" />
-        <activity android:name=".RemindersActivity" />
+        <activity android:name=".RemindersActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ViewDailyActivity"/>
         <activity android:name=".LoginActivity" >

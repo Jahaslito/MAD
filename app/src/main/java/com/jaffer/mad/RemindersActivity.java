@@ -2,6 +2,7 @@ package com.jaffer.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,7 @@ public class RemindersActivity extends AppCompatActivity {
     private RecyclerView rvReminders;
     private ArrayList<Reminder> reminderData;
     private ReminderAdapter reminderAdapter;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,11 @@ public class RemindersActivity extends AppCompatActivity {
         // Lookup the recyclerview in activity layout
         rvReminders = (RecyclerView) findViewById(R.id.recycler_reminders);
         rvReminders.setLayoutManager(new LinearLayoutManager(this));
+        toolbar = findViewById(R.id.tool_bar_reminders);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Reminders");
 
         reminderData = new ArrayList<>();
         reminderAdapter = new ReminderAdapter(reminderData, this);
@@ -50,6 +57,13 @@ public class RemindersActivity extends AppCompatActivity {
         });
         helper.attachToRecyclerView(rvReminders);
     }
+
+
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        onBackPressed();
+//        return true;
+//    }
 
     private void InitializeData() {
         reminderData.clear();
