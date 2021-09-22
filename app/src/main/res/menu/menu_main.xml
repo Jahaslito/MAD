@@ -14,7 +14,8 @@
         android:orderInCategory="2"
         android:title="@string/reminders"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_reminder" />
+        android:icon="@drawable/ic_reminder"
+        android:onClick="goToReminder"/>
     <item
         android:id="@+id/action_status"
         android:orderInCategory="3"

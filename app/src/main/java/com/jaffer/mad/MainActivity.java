@@ -102,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
         Intent bookmarksIntent = new Intent(MainActivity.this, BookmarkActivity.class);
         startActivity(bookmarksIntent);
     }
+    public void goToReminder(MenuItem item) {
+        Intent mIntent= new Intent(this, RemindersActivity.class);
+        startActivity(mIntent);
+    }
 
     public void logout(MenuItem item) {
         mAuth.signOut();
