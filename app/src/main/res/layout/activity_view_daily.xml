@@ -25,74 +25,131 @@
             android:padding="18dp"
             android:layout_marginTop="48dp"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/view_daily_activity_date"
                 android:layout_width="339dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Sunday, 29 August 2021"
-                android:layout_marginBottom="14dp"
+                android:text="@string/sunday_29_august_2021"
+                android:layout_marginBottom="16dp"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/view_activity_1"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:layout_marginBottom="12dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="@string/activity_1"/>
-            <TextView
+                app:cardBackgroundColor="@color/primaryTextColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/view_activity_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="@string/activity_1"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/whiteCardColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+                <TextView
                 android:id="@+id/view_activity_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12dp"
+                android:layout_margin="8dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="@string/activity_1"/>
-            <TextView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/primaryTextColor"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+                <TextView
                 android:id="@+id/view_activity_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 android:text="@string/activity_1"/>
-            <TextView
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/whiteCardColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+                <TextView
                 android:id="@+id/view_activity_4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
-                android:layout_marginBottom="12dp"
+                android:layout_margin="8dp"
                 android:text="@string/activity_1"/>
-            <TextView
-                android:id="@+id/memoText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="12dp"
-                android:text="@string/Memo"/>
-            <TextView
-                android:id="@+id/view_activity_5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="17sp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="12dp"
-                android:text="@string/activity_1"/>
+            </androidx.cardview.widget.CardView>
 
-<!--            <com.github.lzyzsd.circleprogress.DonutProgress-->
-<!--                android:id="@+id/percentage_completion"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:donut_progress="20"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="20dp"/>-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:cardBackgroundColor="@color/primaryTextColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/memoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:textStyle="bold"
+                    android:text="@string/memo"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/view_activity_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="8dp"
+                    android:text="@string/activity_1"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/percentage_completion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:donut_progress="20"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 

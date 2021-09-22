@@ -31,6 +31,11 @@
     <string name="bookmark_title">Bookmark Title</string>
     <string name="article_author">Article Author</string>
     <string name="article_description">Article Description</string>
+    <string name="sunday_29_august_2021">Sunday, 29 August 2021</string>
+    <string name="memo">Memo:</string>
+    <string name="save">SAVE</string>
+    <string name="_80_completed">80% Completed</string>
+    <string name="type_here">Type here</string>
 
     <string-array name="addictionUrl">
         <item>https://medium.com/article/when-your-addiction-recovery-stories-backfire-cc15fed7b5fd</item>
