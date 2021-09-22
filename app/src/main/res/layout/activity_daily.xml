@@ -33,25 +33,25 @@
             android:id="@+id/daily_activity1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Activity 1"
+            android:text="@string/activity_1"
             android:onClick="checkBoxClicked"/>
         <CheckBox
             android:id="@+id/daily_activity2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Activity 1"
+            android:text="@string/activity_1"
             android:onClick="checkBoxClicked"/>
         <CheckBox
             android:id="@+id/daily_activity3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Activity 1"
+            android:text="@string/activity_1"
             android:onClick="checkBoxClicked"/>
         <CheckBox
             android:id="@+id/daily_activity4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Activity 1"
+            android:text="@string/activity_1"
             android:onClick="checkBoxClicked"/>
 <!--        <CheckBox-->
 <!--            android:layout_width="match_parent"-->
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="16dp"
-            android:text="Memo"
+            android:text="@string/memo"
             android:textColor="@color/primaryTextColor"
             android:textSize="16sp"/>
         <com.google.android.material.textfield.TextInputLayout
@@ -78,12 +78,12 @@
                 android:backgroundTint="@color/white"
                 android:textSize="16sp"
                 android:paddingTop="20dp"
-                android:hint="Type here"/>
+                android:hint="@string/type_here"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SAVE"
+            android:text="@string/save"
             android:onClick="saveMemo"
             android:layout_gravity="end"/>
 
